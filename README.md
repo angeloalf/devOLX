@@ -6,3 +6,6 @@ Projeto clone do OLX - Desenvolvimento React (estudo)
 
 
 # Etapa 2 - Instalação e configuração do Redux
+
+
+# Etapa 3 - Criando sistema de rotas 
