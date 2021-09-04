@@ -12,3 +12,6 @@ Projeto clone do OLX - Desenvolvimento React (estudo)
 
 
 # Etapa 4 - Criando estrutura do Template
+
+
+# Etapa 5 - Configurando o App.css
