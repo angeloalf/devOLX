@@ -3,6 +3,9 @@ import React from 'react'
 import {BrowserRouter} from 'react-router-dom'
 import Routes from './Routes'
 
+// importar stilos
+import './App.css'
+
 // importando componentes do Template
 import {Template} from './components/MainComponents'
 import Header from './components/partials/Header'
