@@ -15,3 +15,6 @@ Projeto clone do OLX - Desenvolvimento React (estudo)
 
 
 # Etapa 5 - Configurando o App.css
+
+
+# Etapa 6 - Criando o Header (estrutura e logo)
