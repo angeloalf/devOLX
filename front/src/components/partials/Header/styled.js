@@ -33,5 +33,46 @@ a {
 .logoO  {color: #FF0000;}
 .logoL  {color: #00FF00;}
 .logoX  {color: #0000FF;}
+
     
+nav { 
+    ul, li {
+        margin: 0;
+        padding: 0;
+        list-style: none;        
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        line-height: 60px;
+    }
+    
+    li {
+        margin-left: 20px;
+        margin-right: 20px;
+
+        a {
+            color: #000;
+            font-size: 14px;
+            text-decoration: none;
+            
+            &:hover {
+                color: #555;
+            }
+
+            &.button {
+                background-color: #FF8100;
+                border-radius: 4px;
+                color: #fff;
+                padding: 5px 10px;
+            }
+
+            &.button:hover {
+                background-color: #E57706;
+            }
+        }
+    }
+}
+
 `
