@@ -18,3 +18,6 @@ Projeto clone do OLX - Desenvolvimento React (estudo)
 
 
 # Etapa 6 - Criando o Header (estrutura e logo)
+
+
+# Etapa 7 - Criando o Header (menu)
