@@ -3,7 +3,11 @@ import {Link} from 'react-router-dom' // component Link para a raiz (home)
 
 import {HeaderArea} from './styled' 
 
+import {isLogged} from '../../../helpers/Authentication'
+
 function Header() {
+    let logged = isLogged() // true or false
+
     return (<>
         <HeaderArea>
             <div className="container">
@@ -17,9 +21,20 @@ function Header() {
                 </div>
                 <nav>
                     <ul>
-                        <li><Link to="">Login</Link></li>
-                        <li><Link to="">Cadastrar</Link></li>
-                        <li><Link to=""  className="button">Inserir Anúncio</Link></li>
+                        {logged && // se true
+                            <>
+                                <li><Link to="/account">Minha Conta</Link></li>
+                                <li><Link to="/logout">Sair</Link></li>
+                                <li><Link to="/post"  className="button">Inserir Anúncio</Link></li>
+                            </>
+                        }
+                        {!logged && // se false
+                            <>
+                                <li><Link to="/signin">Login</Link></li>
+                                <li><Link to="/signup">Cadastrar</Link></li>
+                                <li><Link to="/signin"  className="button">Inserir Anúncio</Link></li>
+                            </>
+                        }                                                
                     </ul>
                 </nav>
             </div>
