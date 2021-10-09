@@ -21,3 +21,6 @@ Projeto clone do OLX - Desenvolvimento React (estudo)
 
 
 # Etapa 7 - Criando o Header (menu)
+
+
+# Etapa 8 - Sistema de Login (cookie)
