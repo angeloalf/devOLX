@@ -3,6 +3,7 @@ import { Switch, Route} from 'react-router' // define rotas
 
 import Home from './pages/Home'
 import Sobre from './pages/Sobre'
+import NotFound from './pages/NotFound'
 
 function Routes() {
 
@@ -15,6 +16,10 @@ function Routes() {
             <Route exact path="/sobre">
                 <Sobre />
             </Route>
+            <Route>
+                <NotFound />
+            </Route>
+
         </Switch>
     
     </>)
