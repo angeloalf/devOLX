@@ -1,21 +1,32 @@
 import React, {useState} from 'react'
 import { PageContainer, PageTitle } from '../../components/MainComponents'
 import { PageArea } from './styled'
+import useApi from '../../helpers/OlxApi'
+import { doLogin } from '../../helpers/Authentication'
 
 
 const Page = () => {
+    const api = useApi(); // cria o obejto api
     // cria os states
     const [email, setemail] = useState('') 
     const [password, setPassword] = useState('')
-    const [rememberPassword, setRememberPassword] = useState('')
+    const [rememberPassword, setRememberPassword] = useState(false)
     const [disabled, setDisabled] = useState(false)
+    const [error, setError] = useState('') // trata erro do json
 
     // cria a função enviar()
-    const enviar = (e) => {
+    const enviar = async(e) => {
         e.preventDefault()   // evita consultar dados sem o preecnimento de todos dados             
         setDisabled(true)    // desabilita comandos do formulário
 
+        const json = await api.login(email, password)
 
+        if(json.error) {
+            setError(json.error)
+        } else {
+            doLogin(json.token, rememberPassword)
+            window.location.href = '/';
+        }
     }
     return (<>
         <PageContainer>

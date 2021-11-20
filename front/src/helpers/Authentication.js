@@ -5,6 +5,14 @@ export const isLogged = () => {
     return (token) ? true : false
 }
 
+export const doLogin = (token, rememberPassword = false) => {
+    if (rememberPassword) {
+        Cookies.set('token', token, {expires:999}) // expira em 999 dias
+    } else {
+        Cookies.set('token', token)
+    }
+}
+
 // pderia ser assim também
 //function isLogged() {
     //let token = Cookies.get('token')
